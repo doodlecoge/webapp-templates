@@ -1,0 +1,9 @@
+@media (min-width: 1200px) {
+    .c {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+
+}

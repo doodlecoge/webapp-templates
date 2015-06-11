@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body, input, textarea, keygen, select, button {
+    font-size: 16px;
+    font-family: "Microsoft YaHei", "微软雅黑";
+    color: #555;
+}
+
+.c {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    background: #f8f8f8;
+    border-bottom: 1px solid silver;
+    padding: 1em 0;
+}
+
+table.layout {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.layout td.min {
+    width: .1%;
+    white-space: nowrap;
+    padding-left: 1em;
+}
+
+label.brand {
+    font-size: 3em;
+}
+
+ul.menu {
+    float: right;
+    margin: 0;
+}
+
+ul.menu li {
+    list-style: none;
+    display: inline;
+    margin-left: 1em;
+}
+
+#footer {
+    background: #f8f8f8;
+    border-top: 1px solid silver;
+    padding: 1em 0;
+}
