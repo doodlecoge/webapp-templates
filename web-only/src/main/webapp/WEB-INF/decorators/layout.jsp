@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="decorator"
            uri="http://www.opensymphony.com/sitemesh/decorator" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<spring:message var="siteTitle" code="site.title"/>
 <%
     String cp = request.getContextPath();
 %>
@@ -22,7 +24,7 @@
     <%--<meta http-equiv="Pragma" content="no-cache"/>--%>
     <%--<meta http-equiv="Expires" content="0"/>--%>
 
-    <title><decorator:title/> - Web Only Template</title>
+    <title><decorator:title/> - ${siteTitle}</title>
     <link rel="stylesheet" href="<%=cp%>/css/site.css">
     <link rel="stylesheet" href="<%=cp%>/css/site-resp.css">
     <decorator:head/>
@@ -53,7 +55,7 @@
 </div>
 <div id="footer">
     <div class="c">
-        Footer
+        <spring:message code="site.foot.note"/>
     </div>
 </div>
 </body>

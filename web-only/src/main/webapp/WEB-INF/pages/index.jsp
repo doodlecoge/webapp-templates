@@ -11,7 +11,7 @@
     <title>Home</title>
 </head>
 <body>
-Hello ${who}!
+Hello <b>${who}</b>, welcome to <b>${siteTitle}</b>!
 <br/>
 ${timestamp}
 </body>
