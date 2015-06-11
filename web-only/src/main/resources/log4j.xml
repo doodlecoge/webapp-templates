@@ -22,7 +22,7 @@
     </appender>
 
 
-    <logger name="org.springframework">
+    <logger name="org.springframework" additivity="false">
         <level value="${log.level}"/>
         <appender-ref ref="consoleAppender"/>
         <appender-ref ref="fileAppender"/>

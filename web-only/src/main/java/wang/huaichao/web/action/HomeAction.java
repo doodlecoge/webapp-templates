@@ -1,11 +1,13 @@
 package wang.huaichao.web.action;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import wang.huaichao.web.AppCtxHolder;
 
 import java.util.Calendar;
@@ -24,5 +26,19 @@ public class HomeAction {
         );
         map.put("siteTitle", siteTitle);
         return "index";
+    }
+
+    @RequestMapping("/login_page")
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping("/profile")
+    public String needLogin(ModelMap map) {
+        SecurityContext context = SecurityContextHolder.getContext();
+        Authentication auth = context.getAuthentication();
+        String username = ((UserDetails) auth.getPrincipal()).getUsername();
+        map.put("username", username);
+        return "profile";
     }
 }
